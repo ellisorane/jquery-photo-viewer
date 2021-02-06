@@ -22,6 +22,15 @@ $(document).ready(function () {
     let imgWidth = $('.scr-imgs').width()
     const padding = 20
 
+    // TO PREVENT IMAGE VIEWING ISSUES ON WINDOW RESIZE
+    $(window).resize(function () {
+        currentPosition = 0
+        imgWidth = $('.scr-imgs').width()
+
+        $('.imgContainer').transition({ x:`${0}px`}, 500)
+
+    })
+
     //MOVE IMG WHEN THE NEXT OR PREV BTNS ARE PRESSED
     const slideImgs = () => {
         $('.scroller-prev').on('click', function () {
@@ -47,7 +56,7 @@ $(document).ready(function () {
 
 
 
-    
+
     
     // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // CAROUSEL////////////////////////////////////////////////////////////////////////////////////////////////////////

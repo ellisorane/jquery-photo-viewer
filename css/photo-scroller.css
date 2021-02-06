@@ -49,6 +49,7 @@
 }
 
 .imgContainer img {
+    /* THIS IS THE MARGIN USED FOR CALCULATIONS IN THE JS FILE  */
     margin: 0 10px;
 }
 

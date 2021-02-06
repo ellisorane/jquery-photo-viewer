@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     let currentPosition = $('.imgContainer').position().left
     let imgWidth = $('.scr-imgs').width()
-    const padding = 20
+    const margin = 20
 
     // TO PREVENT IMAGE VIEWING ISSUES ON WINDOW RESIZE
     $(window).resize(function () {
@@ -34,15 +34,15 @@ $(document).ready(function () {
     //MOVE IMG WHEN THE NEXT OR PREV BTNS ARE PRESSED
     const slideImgs = () => {
         $('.scroller-prev').on('click', function () {
-            currentPosition = currentPosition + (imgWidth + padding)
+            currentPosition = currentPosition + (imgWidth + margin)
             if (currentPosition >= 0) {
-                currentPosition = -( ( $('.scr-imgs').length - 1 ) * ( (imgWidth) + padding ) )
+                currentPosition = -( ( $('.scr-imgs').length - 1 ) * ( (imgWidth) + margin ) )
             }
             $('.imgContainer').transition({ x:`${currentPosition}px`}, 500)
         })
 
         $('.scroller-next').on('click', function () {
-            currentPosition = currentPosition - (imgWidth + padding)
+            currentPosition = currentPosition - (imgWidth + margin)
             if ( currentPosition < -( $('.scr-imgs').length * (imgWidth)) ) {
                 currentPosition = 0
             }

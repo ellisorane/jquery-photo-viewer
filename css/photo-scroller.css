@@ -1,19 +1,9 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+.scroller-container {
     width: 100%;
-    background-color: #e8f0f3;
 }
 
 .photoScroller {
+    margin: 0 auto;
     position: relative;
     height: 500px;
     width: 80%;
@@ -25,10 +15,9 @@ body {
     align-items: center;
 }
 
-.btn {
+.scroller-btn {
     position: absolute;
     z-index: 20;
-    /* top: 50%; */
     font-size: 2rem;
     font-weight: bold;
     background-color: #4f88dd;
@@ -39,22 +28,52 @@ body {
     outline: none;
 }
 
-.prev {
+.scroller-prev {
     left: 0;
 }
 
-.next {
+.scroller-next {
     right: 0;
 }
 
 .imgContainer {
     display: flex;
     padding: 30px 5px;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
 }
 
 .imgContainer img {
     margin: 0 10px;
+}
+
+@media (max-width: 1024px) {
+    .photoScroller {
+        height: 400px;
+    }
+
+    .scroller-btn {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .photoScroller {
+        height: 350px;
+    }
+
+    .scroller-btn {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .photoScroller {
+        height: 250px;
+    }
+
+    .scroller-btn {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
 }

@@ -1,0 +1,108 @@
+.carousel-container {
+    width: 80%;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    background-color: rgb(88, 88, 88);
+    height: 500px;
+    /* border-radius: 10px; */
+}
+
+.indicator-div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+    z-index: 100;
+}
+
+.img-num-indicater {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    float: right;
+    padding: 10px 15px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #4f88dd;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+    outline: none;
+}
+
+.car-prev {
+    left: 0;
+}
+
+.car-next {
+    right: 0;
+}
+
+.carouselImgContainer {
+    width: 100%;
+    height: 100%;
+    /* padding: 20px 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.carouselImgContainer img {
+    width: auto;
+    height: 100%;
+    display: none;
+}
+
+.carouselImgContainer img.active {
+    display: block;
+}
+
+.img-prev {
+    transform: translateX(-1000);
+}
+
+@media (max-width: 1024px) {
+    .carousel {
+        height: 400px;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 350px;
+    }
+
+    .carousel-btn {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel {
+        height: 250px;
+    }
+
+    .carousel-btn {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
+
